@@ -11,6 +11,7 @@ class App extends Component {
     };
     this.hanldeDeleteOptions = this.hanldeDeleteOptions.bind(this);
     this.handleAddOption = this.handleAddOption.bind(this);
+    this.hanldeDeleteOption = this.hanldeDeleteOption.bind(this);
   }
 
   hanldeDeleteOptions() {
@@ -35,6 +36,12 @@ class App extends Component {
     });
   }
 
+  hanldeDeleteOption(optionToRemove) {
+    this.setState(prevState => ({
+      options: prevState.options.filter(option => option !== optionToRemove)
+    }));
+  }
+
   render() {
     const title = 'Header Title';
     const subtitle = 'Header Title';
@@ -46,6 +53,7 @@ class App extends Component {
         <Options
           options={this.state.options}
           handleDeleteOptions={this.hanldeDeleteOptions}
+          handleDeleteOption={this.hanldeDeleteOption}
         />
         <AddOption handleAddOption={this.handleAddOption} />
       </div>

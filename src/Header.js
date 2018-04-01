@@ -54,11 +54,9 @@ export class AddOption extends Component {
     const option = e.target.elements.option.value;
     const error = this.props.handleAddOption(option);
 
-    this.setState(() => {
-      return {
-        error
-      };
-    });
+    this.setState(() => ({
+      error
+    }));
   }
   render() {
     return (
@@ -79,14 +77,31 @@ export const Options = props => {
       <button onClick={props.handleDeleteOptions}>Remove All</button>
       Options Length - {props.options.length}
       {props.options.map(option => {
-        return <Option key={option} option={option} />;
+        return (
+          <Option
+            key={option}
+            option={option}
+            handleDeleteOption={props.handleDeleteOption}
+          />
+        );
       })}
     </div>
   );
 };
 
 export const Option = props => {
-  return <div>Option - {props.option}</div>;
+  return (
+    <div>
+      Option - {props.option}
+      <button
+        onClick={() => {
+          props.handleDeleteOption(props.option);
+        }}
+      >
+        Remove
+      </button>
+    </div>
+  );
 };
 
 export const UserInfo = props => {

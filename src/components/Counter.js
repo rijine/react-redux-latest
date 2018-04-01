@@ -13,28 +13,20 @@ export class Counter extends Component {
     this.toggleMe = this.toggleMe.bind(this);
   }
   toggleMe() {
-    this.setState(prevState => {
-      return {
-        showCounter: !prevState.showCounter
-      };
-    });
+    this.setState(prevState => ({
+      showCounter: !prevState.showCounter
+    }));
   }
   addOne() {
-    this.setState(prevState => {
-      return { count: prevState.count + 1 };
-    });
+    this.setState(prevState => ({ count: prevState.count + 1 }));
   }
 
   decOne() {
-    this.setState(prevState => {
-      return { count: prevState.count - 1 };
-    });
+    this.setState(prevState => ({ count: prevState.count - 1 }));
   }
 
   reset() {
-    this.setState(() => {
-      return { count: 0 };
-    });
+    this.setState(() => ({ count: 0 }));
   }
 
   render() {
@@ -54,4 +46,4 @@ export class Counter extends Component {
 
 Counter.defaultProps = {
   count: 0
-}
+};
