@@ -14,6 +14,28 @@ class App extends Component {
     this.hanldeDeleteOption = this.hanldeDeleteOption.bind(this);
   }
 
+  componentDidMount() {
+    console.log('Did mount');
+    const json = JSON.parse(localStorage.getItem('option'));
+    this.setState(() => ({ options: json }));
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log('Did update', prevProps, prevState);
+    let json;
+    try {
+      json = JSON.stringify(this.state.options);
+    } catch (e) {}
+
+    if (json) {
+      localStorage.setItem('option', json);
+    }
+  }
+
+  componentWillUnmount() {
+    console.log('unmount');
+  }
+
   hanldeDeleteOptions() {
     this.setState(() => {
       return {
