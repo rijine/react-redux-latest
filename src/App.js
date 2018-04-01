@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import { Header, Action, AddOption, Options } from './Header';
+import { Header, Action, AddOption, Options, UserInfo } from './Header';
 
 class App extends Component {
   constructor(props) {
@@ -41,7 +41,8 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Header title={title} subtitle={subtitle} />
+        <UserInfo name="My Name" />
+        <Header subtitle={subtitle} />
         <Options
           options={this.state.options}
           handleDeleteOptions={this.hanldeDeleteOptions}
