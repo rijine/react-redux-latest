@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import { Header, Action, AddOption, Options, UserInfo } from './Header';
+import { Header } from './components/Header';
+import { AddOption } from './components/AddOption';
+import { Options } from './components/Options';
 import { OptionModel } from './components/OptionModel';
+import { UserInfo } from './components/UserInfo';
 
 class App extends Component {
   constructor(props) {
