@@ -8,7 +8,11 @@ export const OptionModel = props => (
     contentLabel="Minimal Modal Example"
   >
     <h2>Selected Option</h2>
-    {props.selectedOption && <p>{props.selectedOption}</p>}
-    <button onClick={props.handleClearSelection}>Close Modal</button>
+    <div className="modal__body">
+      {props.selectedOption && <p>{props.selectedOption}</p>}
+    </div>
+    <button className="btn-custom" onClick={props.handleClearSelection}>
+      Close Modal
+    </button>
   </Modal>
 );
