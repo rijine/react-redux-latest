@@ -4,10 +4,11 @@ import { Counter } from './Counter';
 export const Header = props => {
   return (
     <div className="header">
-      <h1>{props.title}</h1>
-      {props.subtitle && <h3>{props.subtitle}</h3>}
-
-      <Counter />
+      <div className="container">
+        <h1 className="header__title">{props.title}</h1>
+        {props.subtitle && <h3 className="header__subtitle">{props.subtitle}</h3>}
+        {/* <Counter /> */}
+      </div>
     </div>
   );
 };

@@ -1,0 +1,17 @@
+.option {
+  border-bottom: 1px solid lighten($primary-bg-color, 2%);
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem 1rem;
+}
+.option__text {
+  padding: .5rem;
+}
+.add-option {
+  display: flex;
+}
+.add-option__input {
+  flex-grow: 1;
+  font-weight: 500;
+
+}

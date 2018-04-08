@@ -21,9 +21,9 @@ export class AddOption extends Component {
     return (
       <div>
         {this.state.error && <div>{this.state.error}</div>}
-        <form onSubmit={this.handleAddOption}>
-          <input type="text" name="option" />
-          <button>Add Option</button>
+        <form className="add-option" onSubmit={this.handleAddOption}>
+          <input className="add-option__input" type="text" name="option" />
+          <button className="btn-custom">Add Option</button>
         </form>
       </div>
     );

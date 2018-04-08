@@ -1,10 +1,19 @@
-h1 {
-  font-size: 2.2rem;
-  color: red;
+.header {
+    background-color: $primary-color;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
 }
 
-.header {
-  background-color: blue;
-  margin: 2rem;
-  padding: 1rem 0;
+/*  BEM - block element modifier convention */
+
+.header__title {
+    font-size: 2.3rem;
+    color: $secondary-color;
+    margin: 0;
+}
+
+.header__subtitle {
+    font-size: 1.2rem;
+    color: $secondary-color;
+    margin: 0;
 }

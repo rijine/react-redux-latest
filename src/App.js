@@ -44,7 +44,8 @@ class App extends Component {
   }
 
   handlePick() {
-    this.setState(() => ({ selectedOption: this.state.options[0] }));
+    const randomNo = Math.floor((Math.random() * this.state.options.length));
+    this.setState(() => ({ selectedOption: this.state.options[randomNo] }));
   }
 
   handleClearSelection() {
@@ -85,17 +86,22 @@ class App extends Component {
     const subtitle = 'Header Title';
 
     return (
-      <div className="App">
-        <UserInfo name="My Name" />
+      <div className="">
+        {/* <UserInfo name="My Name" /> */}
         <Header subtitle={subtitle} />
-        <button onClick={this.handlePick}> What do I do?</button>
-        <Options
-          options={this.state.options}
-          handleDeleteOptions={this.hanldeDeleteOptions}
-          handleDeleteOption={this.hanldeDeleteOption}
-        />
-        <AddOption handleAddOption={this.handleAddOption} />
-        <OptionModel handleClearSelection={this.handleClearSelection} selectedOption={this.state.selectedOption} />
+        <div className="container">
+          <button className="btn-large" onClick={this.handlePick}> What do I do?</button>
+          <Options
+            options={this.state.options}
+            handleDeleteOptions={this.hanldeDeleteOptions}
+            handleDeleteOption={this.hanldeDeleteOption}
+          />
+          <AddOption handleAddOption={this.handleAddOption} />
+          <OptionModel
+            handleClearSelection={this.handleClearSelection}
+            selectedOption={this.state.selectedOption}
+          />
+        </div>
       </div>
     );
   }

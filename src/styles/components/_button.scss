@@ -1,0 +1,36 @@
+.btn-large {
+  background: $primary-btn-bg-color;
+  border: none;
+  border-bottom: .4rem solid darken($primary-btn-bg-color, 10%);
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn-large:disabled {
+  opacity: .5;
+}
+
+.btn-custom {
+  background: $primary-btn-bg-color;
+  border: none;
+  border-bottom: .2rem solid darken($primary-btn-bg-color, 10%);
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: .8rem;
+  /* margin-bottom: 1rem; */
+}
+
+.btn--link {
+  background: none;
+  background-color: none;
+  border: none;
+  color: #db1616;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: .5rem;
+   /* margin-bottom: 1rem; */
+}

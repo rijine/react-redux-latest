@@ -1,0 +1,21 @@
+.widget {
+  background: white;
+  margin-bottom: 2rem;
+}
+
+.widget__message {
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+.widget-header {
+  background: $third-bg-color;
+  /* opacity: .6; */
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between
+}
+.widget-header__title {
+  margin: .4rem;
+}
