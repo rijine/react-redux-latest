@@ -7,7 +7,7 @@ import { Options } from './components/Options';
 import { OptionModel } from './components/OptionModel';
 import { UserInfo } from './components/UserInfo';
 
-class App extends Component {
+class OptionsApp extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -107,4 +107,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default OptionsApp;

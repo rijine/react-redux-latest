@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 import 'normalize.css';
 import './index.css';
 import './styles/styles.scss';
-import App from './App';
+import OptionsApp from './OptionsApp';
+import ExpenseApp from './ExpenseApp';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<ExpenseApp />, document.getElementById('root'));
 registerServiceWorker();
