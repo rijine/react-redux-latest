@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 export const ExpenseDashboardPage = () => <div>Dashboard Page</div>;
 export const AddExpensePage = () => <div>Add Expense Page</div>;
@@ -7,10 +7,11 @@ export const PageNotFound = () => <div>404 Page Not Found</div>;
 
 const routes = (
   <BrowserRouter>
-    <div>
-      <Route exact path="/" component={ExpenseDashboardPage} ></Route>
+    <Switch>
+      <Route exact={true} path="/" component={ExpenseDashboardPage} ></Route>
       <Route path="/create" component={AddExpensePage} />
-    </div>
+      <Route component={PageNotFound} />
+    </Switch>
   </BrowserRouter>
 );
 
