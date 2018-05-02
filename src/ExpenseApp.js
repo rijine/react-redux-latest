@@ -3,11 +3,12 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 export const ExpenseDashboardPage = () => <div>Dashboard Page</div>;
 export const AddExpensePage = () => <div>Add Expense Page</div>;
+export const PageNotFound = () => <div>404 Page Not Found</div>;
 
 const routes = (
   <BrowserRouter>
     <div>
-      <Route path="" component={ExpenseDashboardPage} ></Route>
+      <Route exact path="/" component={ExpenseDashboardPage} ></Route>
       <Route path="/create" component={AddExpensePage} />
     </div>
   </BrowserRouter>
